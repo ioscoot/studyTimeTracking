@@ -2,36 +2,51 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="793.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
-    <AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" prefHeight="138.0">
-      <children>
-        <BorderPane layoutX="0.0" layoutY="0.0" prefHeight="130.0" prefWidth="600.0">
-          <center>
-            <Label fx:id="labelTotalOre" prefWidth="104.0" text="Label" BorderPane.alignment="CENTER_LEFT">
-              <BorderPane.margin>
-                <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
-              </BorderPane.margin>
-            </Label>
-          </center>
-          <left>
-            <ImageView fx:id="profileImage" fitHeight="138.00009999999747" fitWidth="138.00009999999747" pickOnBounds="true" preserveRatio="true">
-              <image>
-                <Image url="file:/C:/Users/rober/Desktop/profil.jpg" />
-              </image>
-              <BorderPane.margin>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-              </BorderPane.margin>
-            </ImageView>
-          </left>
-        </BorderPane>
-      </children>
-    </AnchorPane>
+    <AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" prefHeight="138.0" />
+    <ImageView fx:id="profileImage" fitHeight="138.00009999999747" fitWidth="138.00009999999747" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="file:/C:/Users/rober/Desktop/profil.jpg" />
+      </image>
+    </ImageView>
+    <Label fx:id="labelTotalOre" layoutX="189.0" layoutY="75.0" prefWidth="104.0" text="Total Ore" />
+    <Separator layoutX="14.0" layoutY="168.0" prefWidth="765.0">
+      <effect>
+        <MotionBlur />
+      </effect>
+    </Separator>
+    <Label fx:id="labelNrTotalOre" layoutX="265.0" layoutY="75.0" text="Label" />
+    <Label layoutX="394.0" layoutY="75.0" text="Topic preferat" />
+    <Label fx:id="labelTopicPreferat" layoutX="522.0" layoutY="75.0" text="Label" />
+    <Label layoutX="14.0" layoutY="205.0" text="Data" />
+    <TextField fx:id="textData" layoutX="93.0" layoutY="205.0" prefWidth="200.0" />
+    <Label layoutX="14.0" layoutY="254.0" text="Topic" />
+    <ChoiceBox fx:id="choiceBoxTopic" layoutX="93.0" layoutY="246.0" prefWidth="200.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="14.0" layoutY="297.0" text="Ore" />
+    <TextField fx:id="textNrOre" layoutX="93.0" layoutY="291.0" prefWidth="45.0001220703125" />
+    <Label layoutX="165.0" layoutY="294.0" text="Minute" />
+    <TextField fx:id="textNrMinute" layoutX="241.0" layoutY="291.0" prefWidth="52.0" />
+    <Button fx:id="buttonAdd" layoutX="156.0" layoutY="345.0" mnemonicParsing="false" text="Add" />
+    <Label layoutX="468.0" layoutY="197.0" text="Adauga Topic" />
+    <Label layoutX="468.0" layoutY="241.0" text="Denumire Topic" />
+    <TextField fx:id="textDenumireTopic" layoutX="579.0" layoutY="238.0" prefWidth="200.0" />
+    <Button fx:id="buttonAddTopic" layoutX="563.0" layoutY="282.0" mnemonicParsing="false" text="Add" />
   </children>
 </AnchorPane>

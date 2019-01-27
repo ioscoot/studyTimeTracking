@@ -13,7 +13,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Properties applicationProperties = new ApplicationProperties();
-        Prop
 
         java.util.Properties properties = applicationProperties.getPropertiesFromFile();
 
